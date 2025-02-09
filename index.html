@@ -1,0 +1,43 @@
+import { SidebarNav } from "@/components/sidebar-nav"
+import { Breadcrumb } from "@/components/breadcrumb"
+import { SchemeLogos } from "@/components/scheme-logos"
+
+export default function SchemesOverview() {
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-[#1b4a5a] to-[#1e3a8a]">
+      <div className="container mx-auto p-4">
+        <header className="flex justify-between items-center py-6">
+          <h1 className="text-3xl font-medium text-white">Schemes Overview</h1>
+          <Breadcrumb />
+        </header>
+
+        <div className="grid md:grid-cols-[350px_1fr] gap-6 mt-6">
+          <SidebarNav />
+
+          <main className="bg-white rounded-lg p-6 space-y-6">
+            <div className="prose max-w-none">
+              <p>
+                Financial Inclusion is an important priority of the Government. The objective of Financial Inclusion is
+                to extend financial services to the large hitherto un-served population of the country to unlock its
+                growth potential. The Government initiated the National Mission for Financial Inclusion (NMFI), namely,
+                Pradhan Mantri Jan Dhan Yojana (PMJDY) in August, 2014 to provide universal banking services for every
+                unbanked household, based on the guiding principles of banking the unbanked, securing the unsecured,
+                funding the unfunded and serving un-served and under-served areas. With a view to further deepening the
+                Financial Inclusion interventions in the country, PMJDY has been extended beyond 14.8.2018 with the
+                focus on opening of accounts shifting from "every household" to "every unbanked adult".
+              </p>
+              <p>
+                The motto of Financial Inclusion is from Jan Dhan to Jan Suraksha. The overview of the schemes of
+                Financial Inclusion is below:
+              </p>
+              <button className="text-blue-600 hover:text-blue-800">Read more...</button>
+            </div>
+
+            <SchemeLogos />
+          </main>
+        </div>
+      </div>
+    </div>
+  )
+}
+
